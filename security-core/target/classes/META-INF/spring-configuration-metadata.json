@@ -1,0 +1,36 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.zxing.security.core.properties.SecurityProperties",
+      "name": "zxing.security",
+      "type": "com.zxing.security.core.properties.SecurityProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.zxing.security.core.properties.SecurityProperties",
+      "name": "zxing.security.browser",
+      "description": "浏览器端配置",
+      "type": "com.zxing.security.core.properties.BrowserProperties"
+    },
+    {
+      "sourceType": "com.zxing.security.core.properties.SecurityProperties",
+      "name": "zxing.security.oauth2",
+      "description": "OAuth2认证服务器配置",
+      "type": "com.zxing.security.core.properties.OAuth2Properties"
+    },
+    {
+      "sourceType": "com.zxing.security.core.properties.SecurityProperties",
+      "name": "zxing.security.social",
+      "description": "社交登录相关配置",
+      "type": "com.zxing.security.core.properties.SocialProperties"
+    },
+    {
+      "sourceType": "com.zxing.security.core.properties.SecurityProperties",
+      "name": "zxing.security.validate-code",
+      "description": "验证码配置",
+      "type": "com.zxing.security.core.properties.ValidateCodeProperties"
+    }
+  ]
+}

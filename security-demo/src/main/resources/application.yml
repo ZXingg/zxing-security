@@ -1,0 +1,85 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: 123456
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/security-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+
+  session:
+#    设置spring-session存储类型
+    store-type: redis
+
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+
+
+
+
+#security:
+#  basic:
+#    enabled: false
+
+#应用级配置
+zxing:
+  security:
+    browser:
+##      配置自定义登录页,不配置则为默认登录页
+#      loginPage: /demo-signIn.html
+      # 配置自定义注册页
+      registerPage: /demo-signUp.html
+      # 自定义退出登录成功页
+#      signOutUrl: /demo-logout.html
+
+
+    validateCode:
+      imageCode:
+#         设置图形验证码的长度为6，不配置则为默认验证码属性
+        length: 4
+        width: 67
+#        url: /user,/user/*
+    social:
+      qq:
+        app-id: 100550231
+        app-secret: 4444444444444
+        # 设置providerId
+        providerId: callback.do
+        # 将社交登录social前缀的/auth改为以下内容
+      weixin:
+        app-id: wxd99431bbff8305a0
+        app-secret: 60f78681d063590a469f1b297feff3c4
+
+      # 最终url为/social-auth/callback.do
+      filterProcessesUrl: /qqLogin
+    # 配置oauth2
+    oauth2:
+      # 对多个应用进行配置
+      clients[0]:
+        clientId: zxing0
+        clientSecret: zxingsecret0
+        accessTokenValidateSeconds: 3600
+      clients[1]:
+        clientId: zxing1
+        clientSecret: zxingsecret1
+        accessTokenValidateSeconds: 7200
+
+      storeType: jwt
+
+
+
+
+
+
+server:
+  session:
+#  设置session超时时间(最小是1分钟 )
+    timeout: 600
+  port: 8080
+
+
+
+
+
+
+
+
